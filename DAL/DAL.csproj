@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Data\task 3 - hotelsrates.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="HotelRateRepository.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\task 3 - hotelsrates.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
