@@ -29,7 +29,9 @@ namespace Task_3.Controllers
         {
             try
             {
-                return new ObjectResult(_hotelRateRepository.GetByHotelIdAndArrivalDate(hotelId, arrivalDate, ct));
+                var response = new ObjectResult(_hotelRateRepository.GetByHotelIdAndArrivalDate(hotelId, arrivalDate, ct));
+                response.StatusCode = 200;
+                return response;
             }
             catch (Exception ex)
             {
